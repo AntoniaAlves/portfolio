@@ -176,6 +176,7 @@ header {
 
 .sidebar {
     width: 20rem;
+    z-index: 99; 
     height: 100vh;
     background-color: #fff;
     position: fixed;
@@ -349,13 +350,18 @@ header {
     height: 100%;
     border-radius: .5rem;
     opacity: .8;
+    transition: opacity .3s; 
+}
+
+.card:hover .card-img-wrapper img{
+    opacity: .5;
 }
 
 .card-info{
     position: absolute;
+    bottom: 0;
     opacity: 0;
     visibility: hidden;
-    bottom: 0;
     padding: 2rem;
     text-shadow: 0.3rem 0.2rem 0.3rem rgba(0, 0, 0, .6);
     transition: all .3s;
@@ -394,6 +400,9 @@ header {
     border-radius: .5rem;
     border: none;
     box-shadow: 0 .1rem .8rem rgba(0, 0, 0, .4);
+    cursor: pointer;
+    opacity: 0;
+    animation: moveBanner 1s 0.9s forwards;
 
 }
 
